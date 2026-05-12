@@ -1,0 +1,64 @@
+Caso práctico 1: Lavadora de autos
+Objetivo
+Desarrollar una aplicación Flutter básica que calcule el valor a pagar por un servicio de lavado de autos y genere una nota de venta.
+
+Requisitos funcionales
+El usuario debe ingresar:
+•	Nombre del cliente 
+•	Tipo de vehículo: auto, camioneta o moto 
+•	Tipo de lavado: básico, completo o premium 
+•	Un servicio adicional opcional: encerado o aspirado 
+La aplicación debe calcular:
+•	Precio base del lavado 
+•	Valor adicional 
+•	Subtotal 
+•	IVA 15% 
+•	Total a pagar 
+Al finalizar, debe mostrar una nota de venta en una segunda pantalla.
+
+Requisitos técnicos
+1. Aplicar MVC
+Modelo / clase: ServicioLavadoModelo
+Debe guardar:
+•	Nombre del cliente 
+•	Tipo de vehículo 
+•	Tipo de lavado 
+•	Servicio adicional 
+•	Subtotal 
+•	IVA 
+•	Total 
+Controlador / clase: LavadoControlador
+Debe encargarse de:
+•	Validar campos vacíos 
+•	Asignar precios 
+•	Calcular subtotal 
+•	Calcular IVA 
+•	Calcular total 
+Vistas:
+•	VistaLavado: formulario de ingreso 
+•	VistaNotaVenta: pantalla de resultado 
+
+2. Aplicar Atomic Design
+Átomos
+•	Campo de texto para el cliente 
+•	Selector simple para vehículo 
+•	Selector simple para lavado 
+•	Botón principal 
+•	Texto o etiqueta 
+Moléculas
+•	Formulario de datos del servicio 
+•	Bloque de resumen de nota de venta 
+
+3. Aplicar rutas con argumentos
+La aplicación debe tener dos rutas:
+•	/lavado: pantalla del formulario 
+•	/notaVenta: pantalla de la nota de venta 
+El objeto ServicioLavadoModelo debe enviarse desde la primera pantalla hacia la segunda como argumento.
+
+4. Aplicar Themes
+Debe existir un tema visual sencillo:
+•	Colores: azul, blanco y gris 
+•	AppBar azul 
+•	Botones redondeados 
+•	Campos de texto con borde 
+•	Fondo claro 
